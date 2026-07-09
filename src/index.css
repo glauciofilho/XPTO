@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans bg-neutral text-primary dark:bg-slate-950 dark:text-neutral-100 antialiased transition-colors duration-200;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection {
+    @apply bg-secondary text-white;
+  }
+
+  /* Scrollbar customization */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral dark:bg-slate-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-neutral-200 dark:bg-slate-800 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-tertiary dark:bg-slate-700;
+  }
+}
+
+@layer components {
+  /* Dividers */
+  .divider {
+    @apply border-t border-outline dark:border-slate-800;
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-medium text-label-md 
+           rounded transition-all duration-200 
+           hover:bg-tertiary active:scale-95 cursor-pointer
+           dark:bg-white dark:text-slate-950 dark:hover:bg-neutral-100;
+  }
+
+  /* Secondary (outline) Button */
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-medium 
+           text-label-md rounded transition-all duration-200 
+           hover:bg-neutral-100 active:scale-95 cursor-pointer
+           dark:border-white dark:text-white dark:hover:bg-slate-900;
+  }
+
+  /* Card */
+  .card {
+    @apply bg-white border border-outline rounded-lg p-6 transition-all duration-200
+           dark:bg-slate-900 dark:border-slate-800/80;
+  }
+  .card-hover {
+    @apply card hover:bg-neutral-100 dark:hover:bg-slate-800/60;
+  }
+
+  /* Badge */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 text-xs font-medium rounded bg-neutral-100 text-tertiary
+           dark:bg-slate-800 dark:text-neutral-200;
+  }
+  .badge-amber {
+    @apply badge bg-secondary-container text-amber-800 dark:bg-amber-950/60 dark:text-amber-300;
+  }
+  .badge-green {
+    @apply badge bg-emerald-50 text-emerald-700 dark:bg-emerald-950/40 dark:text-emerald-300;
+  }
+
+  /* Code block */
+  .code-block {
+    @apply font-mono text-mono-md bg-neutral-900 text-emerald-400 rounded-lg p-4 overflow-x-auto
+           dark:bg-slate-950/80 dark:border dark:border-slate-800;
+  }
+
+  /* Section container */
+  .section {
+    @apply py-20 px-16;
+  }
+  .section-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  /* Pipeline layer card */
+  .layer-card {
+    @apply card flex-1 min-w-0;
+  }
+}
