@@ -267,7 +267,7 @@ graph TD
         </motion.div>
 
         {/* Implementation timeline */}
-        <motion.div
+        {/*<motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
@@ -277,7 +277,7 @@ graph TD
           <div className="space-y-0">
             {timeline.map((step, idx) => (
               <div key={step.week} className="flex gap-6">
-                {/* Timeline line */}
+                {/* Timeline line }
                 <div className="flex flex-col items-center">
                   <div className={`h-5 w-5 rounded-full border-2 flex-shrink-0 mt-1 ${
                     idx === 0 ? 'border-secondary bg-secondary' : 'border-outline dark:border-slate-800 bg-white dark:bg-slate-950'
@@ -286,7 +286,7 @@ graph TD
                     <div className="flex-1 w-px bg-outline dark:bg-slate-800 mt-1 mb-1" />
                   )}
                 </div>
-                {/* Content */}
+                {/* Content }
                 <div className="pb-8">
                   <span className="badge-amber mb-2 inline-block">{step.week}</span>
                   <p className="text-body-md text-tertiary dark:text-slate-400">{step.desc}</p>
@@ -295,7 +295,7 @@ graph TD
             ))}
           </div>
         </motion.div>
-
+        */}
         {/* Alternative scenario note */}
         <motion.div
           initial={{ opacity: 0 }}
