@@ -18,7 +18,7 @@ FROM nginx:stable-alpine
 COPY --from=build /app/build /usr/share/nginx/html
 
 # Expõe a porta padrão do servidor web
-EXPOSE 81
+EXPOSE 80
 
 # Inicia o Nginx em primeiro plano
 CMD ["nginx", "-g", "daemon off;"]
