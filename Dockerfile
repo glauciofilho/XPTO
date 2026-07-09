@@ -15,7 +15,7 @@ FROM nginx:stable-alpine
 
 # Copia os arquivos buildados do estágio anterior para o diretório do Nginx
 # Nota: Se você usa Vite, substitua '/app/build' por '/app/dist'
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expõe a porta padrão do servidor web
 EXPOSE 80
