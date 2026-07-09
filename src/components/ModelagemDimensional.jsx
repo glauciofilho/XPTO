@@ -18,22 +18,29 @@ erDiagram
     
     ${t('star_schema.diag_sales_fact')} {
         int sales_id
-        float total_amount
+        int customer_id
+        int product_id
+        date date
         int quantity
+        float total_amount
     }
     ${t('star_schema.diag_prod_dim')} {
+        int product_id
         string name
         string category
         string brand
     }
     ${t('star_schema.diag_date_dim')} {
         date date
+        int day
         int month
         int year
     }
     ${t('star_schema.diag_cust_dim')} {
+        int customer_id
         string name
         string email
+        int number
         string region
     }
   `
