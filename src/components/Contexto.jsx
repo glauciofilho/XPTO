@@ -69,7 +69,7 @@ export default function Contexto() {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          className="grid grid-cols-2 gap-4"
+          className="grid md:grid-cols-1 lg:grid-cols-2 gap-4"
         >
           {problems.map(({ icon: Icon, title, desc }) => (
             <motion.div key={title} variants={itemVariants} className="card-hover dark:bg-slate-900 dark:border-slate-800">
